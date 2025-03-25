@@ -50,7 +50,7 @@ edges = cv2.adaptiveThreshold(gray_blur, 255,
 ```
 - `cv2.adaptiveThreshold()`: 이미지의 밝기에 따라 적응형 임계값을 적용하여 윤곽선을 추출함
 
-##### 설정 정도 비교
+##### 코드 설정 과정
 ![과정](data/changed.png)
 
 - 왼쪽 사진의 설정 코드
@@ -61,11 +61,13 @@ edges = cv2.adaptiveThreshold(gray_blur, 255,
 - 오른쪽 사진의 설정 코드 
 - edges = cv2.adaptiveThreshold(gray_blur, 255,
                               cv2.ADAPTIVE_THRESH_MEAN_C,
-                              cv2.THRESH_BINARY, 5, 5)
+                              cv2.THRESH_BINARY, 7, 5)
 
   
-- 변화시키려는 원본 이미지가 '털이 복슬복슬한 개'이기에 개털을 강조하고자 함
-  따라서, 개털이 더 잘 드러나도록 즉 (7,3)으로 설정함.
+- 변화시키려는 원본 이미지가 '털이 있는 개'이기에 개털을 강조하고자 함
+- block size:7 그리고 상수 c값을 5로 설정한 이미지가 털이 덜 도드라져 보였음
+- 털의 윤곽이 더 보였으면 하기에 5에서 3으로 c값을 수정함
+- 블록 크기는 7, 상수 c는 3으로 하여 (7,3)으로 최종 설정함.
 
 #### 2.5 색상 부드럽게 만들기
 ```python
