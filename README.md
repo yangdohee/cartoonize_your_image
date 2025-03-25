@@ -1,8 +1,7 @@
 # Cartoonize Your Image!!!
 
 ## What is this?
-`cartoonize_your_image.py`는 OpenCV의 다양한 필터링 및 임계값 변환 기법을 사용하여 이미지를 만화 스타일로 변환하는 Python 프로그램입니다. 이 프로그램은 입력된 이미지를 처리하여 윤곽선을 강조하고 색상을 부드럽게 변환하여 만화 같은 이미지를 생성합니다.
-또한, 사용자는 원하는 이미지를 입력하여 간단하게 변환할 수 있으며, 기본적으로 제공된 코드를 확장하여 추가적인 효과를 적용할 수도 있습니다
+`cartoonize_your_image.py`는 OpenCV의 다양한 필터링 및 임계값 변환 기법을 통해, 입력된 이미지를 처리하여 윤곽선을 강조하고 색상을 부드럽게 변환하여 만화 같은 이미지를 생성하는 프로그램입니다.
 
 ## Functionality of 'cartoonized_your_image' Program
 
@@ -93,7 +92,7 @@ cv2.destroyAllWindows()
 
 
 ## 커스텀 입력 경로 사용하기
-기본 이미지 경로 대신 다른 이미지를 변환하고 싶다면 `cartoonize_image` 함수 호출 시 직접 경로를 지정하면 됩니다.
+기본 이미지 경로 대신 다른 이미지를 변환하고 싶다면 `cartoonize_image` 함수 호출 시 직접 경로를 지정하면 됨
 ```python
 cartoonize_image("path_to_your_image.jpg", "output_cartoon.jpg")
 ```
